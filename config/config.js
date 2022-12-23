@@ -2,7 +2,8 @@ require("dotenv").config();
 let environment = process.env.APP_ENVIROMENT;
 let isUsingSSL = (process.env.POSTGRES_SSL == 'true');
 
-console.log(`is usging SSL > ${isUsingSSL}`)
+console.log(`is usging SSL > ${isUsingSSL}`);
+console.log(`using url > ${process.env.PSQL_URL}`);
 
 module.exports = {
   [environment]: {
