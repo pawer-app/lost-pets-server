@@ -13,9 +13,9 @@ export const User = sequelize.define("users", {
   email: {
     type: DataTypes.STRING,
   },
-  profilePic:{
-    type: DataTypes.STRING
-  },
+  // profilePic:{
+  //   type: DataTypes.STRING
+  // },
   // El password esta en Auth
   // password: {
   //   type: DataTypes.STRING,

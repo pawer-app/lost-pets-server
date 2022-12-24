@@ -22,7 +22,6 @@ export const createUser = async (req, res) => {
       defaults: {
         firstname,
         email,
-        profilePic,
       },
     });
    
@@ -65,7 +64,7 @@ export const getUser = async (req, res) => {
 export const updateUser = async (req, res) => {
   try {
     const { id } = req.params;
-    const { firstname, email, password, profilePic } = req.body;
+    const { firstname, email, password } = req.body;
 
     const user = await User.findByPk(id);
 
