@@ -30,8 +30,11 @@ module.exports = {
     await queryInterface.createTable("pets", {
       id: {
         primaryKey: true,
+<<<<<<< HEAD
         autoIncrement: true,
         allowNull: false,
+=======
+>>>>>>> e81208932c4ffb3cbe33eef80ef1cc1dfa782f7a
         type: Sequelize.INTEGER,
       },
       petname: {
