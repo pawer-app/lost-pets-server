@@ -9,7 +9,7 @@ import { sendMail } from "../lib/sendgrid";
 
 export const createUser = async (req, res) => {
   try {
-    const { firstname, email, password, profilePic, userId } = req.body;
+    const { firstname, email, password, userId } = req.body;
 
     if(password.length < 4){
       return 
