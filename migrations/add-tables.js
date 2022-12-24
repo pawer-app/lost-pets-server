@@ -6,6 +6,7 @@ module.exports = {
       id: {
         primaryKey: true,
         autoIncrement: true,
+        allowNull: false,
         type: Sequelize.INTEGER,
       },
       firstname: {
@@ -28,9 +29,12 @@ module.exports = {
 
     await queryInterface.createTable("pets", {
       id: {
-        allowNull: false,
-        autoIncrement: true,
         primaryKey: true,
+<<<<<<< HEAD
+        autoIncrement: true,
+        allowNull: false,
+=======
+>>>>>>> e81208932c4ffb3cbe33eef80ef1cc1dfa782f7a
         type: Sequelize.INTEGER,
       },
       petname: {
@@ -57,6 +61,10 @@ module.exports = {
       },
       userId: {
         type: Sequelize.INTEGER,
+        references: {
+          model: "users",
+          key: "id",
+        },
       },
       objectID: {
         type: Sequelize.STRING,
@@ -77,9 +85,9 @@ module.exports = {
 
     await queryInterface.createTable("auths", {
       id: {
-        allowNull: false,
-        autoIncrement: true,
         primaryKey: true,
+        autoIncrement: true,
+        allowNull: false,
         type: Sequelize.INTEGER,
       },
       email: {

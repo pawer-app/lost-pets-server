@@ -16,13 +16,13 @@ export const Pet = sequelize.define(
       type: DataTypes.STRING,
     },
     lat: {
-      type: DataTypes.FLOAT
+      type: DataTypes.FLOAT,
     },
     lng: {
-      type: DataTypes.FLOAT
+      type: DataTypes.FLOAT,
     },
-    location:{
-      type: DataTypes.STRING
+    location: {
+      type: DataTypes.STRING,
     },
     lost: {
       type: DataTypes.BOOLEAN,
@@ -35,12 +35,12 @@ export const Pet = sequelize.define(
       type: DataTypes.INTEGER,
     },
     objectID: {
-      type: DataTypes.STRING
+      type: DataTypes.STRING,
     },
-    active:{
+    active: {
       type: DataTypes.BOOLEAN,
       allowNull: true,
-    }
+    },
   }
   // prevent sequelize from pluralizing table names:
   // {
