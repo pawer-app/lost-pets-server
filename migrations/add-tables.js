@@ -6,6 +6,7 @@ module.exports = {
       id: {
         primaryKey: true,
         autoIncrement: true,
+        allowNull: false,
         type: Sequelize.INTEGER,
       },
       firstname: {
@@ -28,10 +29,10 @@ module.exports = {
 
     await queryInterface.createTable("pets", {
       id: {
-        allowNull: false,
-        autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.STRING,
+        autoIncrement: true,
+        allowNull: false,
+        type: Sequelize.INTEGER,
       },
       petname: {
         type: Sequelize.STRING,
@@ -57,6 +58,10 @@ module.exports = {
       },
       userId: {
         type: Sequelize.INTEGER,
+        references: {
+          model: "users",
+          key: "id",
+        },
       },
       objectID: {
         type: Sequelize.STRING,
@@ -77,9 +82,9 @@ module.exports = {
 
     await queryInterface.createTable("auths", {
       id: {
-        allowNull: false,
-        autoIncrement: true,
         primaryKey: true,
+        autoIncrement: true,
+        allowNull: false,
         type: Sequelize.INTEGER,
       },
       email: {
